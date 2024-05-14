@@ -23,8 +23,8 @@ class FrasesActivity : AppCompatActivity() {
         quoteViewModel.onCreate()
 
         quoteViewModel.quoteModel.observe(this, Observer {
-            binding.tvQuote.text  = it.quote
-            binding.tvAuthor.text = it.author
+            binding.tvQuote.text  = it?.quote
+            binding.tvAuthor.text = it?.author
         })
 
         quoteViewModel.isLoading.observe(this, Observer {
