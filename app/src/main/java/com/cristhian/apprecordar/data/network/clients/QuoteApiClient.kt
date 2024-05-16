@@ -1,4 +1,4 @@
-package com.cristhian.apprecordar.data.network
+package com.cristhian.apprecordar.data.network.clients
 
 import com.cristhian.apprecordar.data.model.QuoteModel
 import retrofit2.Response

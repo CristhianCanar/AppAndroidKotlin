@@ -1,7 +1,8 @@
-package com.cristhian.apprecordar.data.network
+package com.cristhian.apprecordar.data.network.services
 
 import com.cristhian.apprecordar.core.RetrofitHelper
 import com.cristhian.apprecordar.data.model.QuoteModel
+import com.cristhian.apprecordar.data.network.clients.QuoteApiClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
