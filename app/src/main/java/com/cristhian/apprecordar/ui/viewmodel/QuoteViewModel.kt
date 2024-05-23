@@ -4,19 +4,21 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cristhian.apprecordar.data.model.QuoteModel
-import com.cristhian.apprecordar.data.model.QuoteProvider
 import com.cristhian.apprecordar.domain.GetQuotesUseCase
 import com.cristhian.apprecordar.domain.GetRandomQuoteUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class QuoteViewModel:ViewModel() {
+@HiltViewModel
+class QuoteViewModel @Inject constructor(
+    private val getQuotesUseCase:GetQuotesUseCase,
+    private val getRandomQuoteUseCase:GetRandomQuoteUseCase
+):ViewModel() {
     val quoteModel = MutableLiveData<QuoteModel?>()
     // Para mostrar el loading de carga
     val isLoading = MutableLiveData<Boolean>()
 
-    // Use cases
-    var getQuotesUseCase = GetQuotesUseCase()
-    var getRandomQuoteUseCase = GetRandomQuoteUseCase()
     fun onCreate() {
         viewModelScope.launch {
             isLoading.postValue(true)

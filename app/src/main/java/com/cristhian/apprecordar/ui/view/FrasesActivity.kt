@@ -9,7 +9,9 @@ import androidx.lifecycle.Observer
 import com.cristhian.apprecordar.data.utils.SharedApp
 import com.cristhian.apprecordar.databinding.ActivityFrasesBinding
 import com.cristhian.apprecordar.ui.viewmodel.QuoteViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FrasesActivity : AppCompatActivity() {
     private lateinit var binding:ActivityFrasesBinding
 
