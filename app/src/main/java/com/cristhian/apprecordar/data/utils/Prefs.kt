@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.SharedPreferences
 
 class Prefs(context:Context) {
-    val PREFS_NAME = "String inicial"
-    val SHARED_NAME = "String intercambiable"
+    val PREFS_NAME = "Prefs name"
+    val SHARED_NAME = "Shared name"
 
-    val PREFS_JWT = "String inicial"
-    val SHARED_JWT = "String intercambiable"
+    val PREFS_JWT = "Prefs jwt"
+    val SHARED_JWT = "Shared jwt"
 
     val prefsName: SharedPreferences = context.getSharedPreferences(PREFS_NAME, 0)
     val prefsJWT: SharedPreferences = context.getSharedPreferences(PREFS_JWT, 0)
