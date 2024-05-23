@@ -30,6 +30,7 @@ class LoginViewModel:ViewModel() {
                     userModel.postValue(result.data!!)
                     Log.e("Model User", userModel.toString())
                     isLoading.postValue(false)
+
                 }
                 "invalid" -> {
                     message.postValue(result.message)
