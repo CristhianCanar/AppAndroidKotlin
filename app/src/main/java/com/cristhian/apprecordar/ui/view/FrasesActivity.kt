@@ -6,7 +6,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
-import com.cristhian.apprecordar.data.utils.SharedApp
 import com.cristhian.apprecordar.databinding.ActivityFrasesBinding
 import com.cristhian.apprecordar.ui.viewmodel.QuoteViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,8 +35,5 @@ class FrasesActivity : AppCompatActivity() {
 
         binding.viewContainer.setOnClickListener{ quoteViewModel.randomQuote() }
 
-        val nombre = SharedApp.prefs.name
-
-        binding.tvNameAuth.text = nombre
     }
 }
